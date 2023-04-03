@@ -1,0 +1,13 @@
+:root {
+    --bg-main-color: #222;
+    --text-color-light: #333;
+    --section-padding-small: 0.25em 2em;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Classes principais */
