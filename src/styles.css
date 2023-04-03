@@ -1,17 +1,23 @@
 :root {
   --bg-main-color: #1d2736;
   --text-color-light: #f8f8f8;
-  --section-padding-small: 2em 6em;
+  --primary-accent-color: #FC6A00;
+  --primary-accent-hover: #933d00;
+  --secondary-accent-color: #327EFF;
+  --section-padding-small: 7em 2em;
+  --button-border-radius: 0.5em;
+  --button-padding-small: .5em 0.8em;
+  --transition-time-short: 150ms;
+  --hover-translate-y: translateY(-.2em);
 }
 
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-Regular.ttf")
-    format("truetype");
+  src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,18 +25,32 @@ html {
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-Medium.ttf")
-    format("truetype");
-  font-weight: 500;
+  src: url("/fonts/manrope/Manrope-Medium.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-SemiBold.ttf")
-    format("truetype");
+  src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url("/fonts/ranade/Ranade-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url("/fonts/ranade/Ranade-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -45,6 +65,11 @@ html {
 
 body {
   font-size: 18px;
+  font-family: "Manrope";
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  height: 500vh;
 }
 
 a {
@@ -54,13 +79,25 @@ a {
 
 /* Classes principais */
 
-.section {
+.section, .navbar {
   padding: var(--section-padding-small);
+  position: relative;
+}
+
+.navbar {
+    padding: 2em 2em;
+}
+
+.section.is--hero, .navbar {
+  background-color: var(--bg-main-color);
+  color: var(--text-color-light);
 }
 
 .section.is--hero {
-  background-color: var(--bg-main-color);
-  color: var(--text-color-light);
+  background-image: url(/assets/section-diagonal-divider.svg);
+  background-position: 50% 100%, 0px 0px, 0px 0px;
+  background-size: 100vw, auto, cover;
+  background-repeat: no-repeat, repeat, no-repeat;
 }
 
 .main-container {
@@ -73,6 +110,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: end;
+  gap: 2em;
 }
 
 .hero_heading-wrap {
@@ -80,12 +118,68 @@ a {
 }
 
 .hero_text-wrap {
-  max-width: 15em;
+  max-width: 20em;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  align-items: start;
 }
 
-.heading-syle-large {
-  font-size: 8em;
+.heading-style-large {
+  font-family: "Ranade";
+  font-weight: 400;
+  font-size: 5em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.main-btn {
+    padding: var(--button-padding-small);
+    background-color: var(--primary-accent-color);
+    border-radius: var(--button-border-radius);
+    transition: all var(--transition-time-short);
+}
+
+.main-btn:hover {
+    background-color: var(--primary-accent-hover);
+    transform: var(--hover-translate-y);
+}
+
+.main-btn.is--secondary {
+    padding: var(--button-padding-small);
+    border: 1px solid var(--text-color-light);
+    border-radius: var(--button-border-radius);
+    background-color: transparent;
+    transition: all var(--transition-time-short);
+}
+
+.main-btn.is--secondary:hover {
+    background-color: var(--text-color-light);
+    color: var(--bg-main-color);
+    transform: var(--hover-translate-y);
+}
+
+.hero_product-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: -2em;
+    margin-bottom: -20%;
+    pointer-events: none;
+}
+
+.navbar_comp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar_menu-wrap {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.navbar_brand-logo {
+    width: 180px;
 }
