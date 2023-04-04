@@ -9,9 +9,9 @@
     <meta name="description" content="Joe's Pizza serves the best pizza in town, made with fresh ingredients and baked to perfection. Come try our delicious pizza today!">
     <link rel="stylesheet" href="src/styles.css">
 </head>
-<body>
+<body data-speed="300">
     <!-- Start page wrapper -->
-    <div class="page-wrapper">
+    <div id="s-top" class="page-wrapper">
         <!-- Start main wrapper -->
         <main class="main-wrapper">
             <!-- Start home banner -->
@@ -20,19 +20,20 @@
             <header class="navbar">
                 <div class="main-container">
                     <div class="navbar_comp">
-                        <a href="#" class="navbar_logo-wrap"><img src="/assets/images/brand-logo-desktop.png" alt="Diamond Expert" class="navbar_brand-logo"></a>
+                        <a href="#s-top" class="navbar_logo-wrap"><img src="/assets/images/brand-logo-desktop.png" alt="Diamond Expert" class="navbar_brand-logo"></a>
                         <div class="navbar_menu-wrap">
-                            <a href="#" class="navbar_menu-link">Home</a>
-                            <a href="#" class="navbar_menu-link">Sobre</a>
-                            <a href="#" class="navbar_menu-link">História</a>
+                            <a href="#s-about" class="navbar_menu-link">Sobre</a>
+                            <a href="#s-history" class="navbar_menu-link">História</a>
+                            <a href="#" class="navbar_menu-link">Dúvidas frequentes</a>
                             <a href="#" class="main-btn is--secondary">Loja</a>
                         </div>
                     </div>
                 </div>
             </header>
             <!-- Start hero section -->
-            <section class="section is--hero">
+            <section id="s-hero" class="section is--hero">
                 <div class="main-container">
+                    <!-- Start hero comp -->
                     <div class="hero_comp">
                         <div class="hero_heading-wrap">
                             <h1 class="heading-style-large">Mude de vida com a <span class="text-span-underline">Diamond Expert</span> Brasil</h1>
@@ -41,14 +42,14 @@
                             <p class="text-size-normal">Ofereça o melhor para a saúde das articulações. Seja um revendedor da Diamond Expert e ajude seus clientes a transformarem suas vidas.</p>
                             <a href="#" class="main-btn">Seja um representante</a>
                         </div>
-                        
+                        <img src="/assets/images/produto-hero.png" alt="Tres potes de 60 cápsulas da Dimond Expert" class="hero_product-image">
                     </div>
+                    <!-- End hero comp -->
                 </div>
-                <img src="/assets/images/produto-hero.png" alt="Tres potes de 60 cápsulas da Dimond Expert" class="hero_product-image">
             </section>
             <!-- End hero section -->
             <!-- Start about section -->
-            <section class="section">
+            <section id="s-about" class="section">
                 <div class="main-container">
                     <div class="about_comp">
                         <div class="about_content-left-wrap">
@@ -66,12 +67,31 @@
                 </div>
             </section>
             <!-- End about section -->
+            <!-- Start review section -->
+            <section id="s-review" class="section is--review">
+                <div class="main-container">
+                    <div class="review_comp">
+                        <p class="text-overline">nossos clientes</p>
+                        <p class="text-size-large">“Quero deixar registrado o meu agradecimento à Diamond Expert pelo excelente produto de colágeno tipo 2 em cápsulas. Desde que comecei a utilizar, minhas dores articulares diminuíram consideravelmente e sinto uma melhoria significativa na minha qualidade de vida.”</p>
+                        <div class="review_client-info-wrap">
+                            <img src="/assets/images/client-carla-picture.jpg" alt="Foto enviada pela nossa querida Clara Oliviera" class="review_client-image">
+                            <p>Carla Oliveira</p>
+                            <p class="text-size-small">25 anos, casada</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End review section -->
             <!-- Start history section -->
-            <section class="section">
+            <section id="s-history" class="section is--dark">
                 <div class="main-container">
                     <div class="history_comp">
-                        <h2 class="heading-style-medium">História section</h2>
-                        <p class="text-size-normal">Ofereça o melhor para a saúde das articulações. Seja um revendedor da Diamond Expert e ajude seus clientes a transformarem suas vidas.</p>
+                        <did class="history_content-right-wrap">
+                            <h2 class="heading-style-medium">Olá, sou Lucas Lobianco</h2>
+                            <p class="text-size-normal">Com o sangue empreendedor, comecei minha jornada ajudando pessoas e vendo resultados de perto. Na Diamond Expert, serei seu parceiro durante o processo de pedidos em lote.</p>
+                            <a href="#" class="main-btn">Seja um representante</a>
+                        </did>
+                        <div class="history_image-wrap"><img src="./assets/images/woman-training-gym.jpg" alt="Mulheres treinando na academia" class="content_image"></div>
                     </div>
                 </div>
             </section>
