@@ -9,50 +9,11 @@
   --button-padding-small: .5em 0.8em;
   --transition-time-short: 150ms;
   --hover-translate-y: translateY(-.2em);
+  --section-column-gap: 4em;
 }
 
 html {
   font-family: sans-serif;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-Medium.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Ranade";
-  src: url("/fonts/ranade/Ranade-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Ranade";
-  src: url("/fonts/ranade/Ranade-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
 *,
@@ -65,14 +26,15 @@ html {
 
 body {
   font-size: 18px;
+  background-color: var(--text-color-light);
   font-family: "Manrope";
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  height: 500vh;
+  /* height: 500vh; */
 }
 
-a {
+a, u {
   color: inherit;
   text-decoration: inherit;
 }
@@ -182,4 +144,121 @@ a {
 
 .navbar_brand-logo {
     width: 180px;
+}
+
+.heading-style-medium {
+  font-size: 2em;
+  font-family: "Ranade";
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.text-overline {
+  font-size: 0.6em;
+  font-family: "Ranade";
+  text-transform: uppercase;
+  letter-spacing: 0.65em;
+}
+
+.about_comp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: var(--section-column-gap);
+}
+
+
+.about_content-left-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.about_advantages-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5em;
+  margin-top: 2em;
+}
+
+.about_advantages-wrap u {
+  padding-left: 39px;
+  background-image: url("/assets/icons/checkmark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%, 0px 0px, 0px 0px;
+  background-size: 24px, auto, cover;
+}
+
+.text-span-underline {
+  padding: 4px 2px 8px;
+  background-image: url("/assets/images/heading-underline-span.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%, 0px 0px, 4px 0px;
+  background-size: 90%;
+  pointer-events: none;
+}
+
+.home_banner-wrap {
+  background-color: var(--secondary-accent-color);
+  color: var(--text-color-light);
+  height: 25px;
+}
+
+/* Tablet brekpoint */
+
+@media screen and (max-width: 991px) {
+
+}
+
+/* Horizontal mobile */
+
+@media screen and (max-width: 767px) {
+  
+}
+
+/* Potrait mobile */
+
+@media screen and (max-width: 479px) {
+  
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/Manrope-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url("/fonts/ranade/Ranade-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url("/fonts/ranade/Ranade-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
