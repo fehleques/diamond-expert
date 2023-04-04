@@ -212,6 +212,7 @@ a, u {
 
 .history_comp {
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 
@@ -304,6 +305,7 @@ a, u {
 }
 
 .history_content-right-wrap {
+  max-width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: center;
