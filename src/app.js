@@ -2,9 +2,9 @@
 //     $('.navbar_menu-wrapper').toggleClass('is--open');
 //   });
 
-//   $(window).scroll(function () {
-//     $(window).scrollTop() > 100 ? $(".navbar").addClass("on--scroll") : $(".navbar").removeClass("on--scroll");
-//   });
+  $(window).scroll(function () {
+    $(window).scrollTop() > 100 ? $(".navbar").addClass("on--scroll") : $(".navbar").removeClass("on--scroll");
+  });
 
 // $('.faq_item-wrap').on('click', function() {
 //     $(this).removeClass('is--clicked'),

@@ -57,6 +57,10 @@ img {
   z-index: 99999;
 }
 
+.navbar.on--scroll {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.09);
+}
+
 .section, .navbar {
   padding: var(--section-padding-small);
 }
@@ -372,6 +376,7 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
+  transition: all var(--transition-time-short);
 }
 
 .faq_item-wrap {
@@ -387,6 +392,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  justify-items: center;
 }
 
 /* .faq_item-icon {
@@ -395,19 +401,17 @@ img {
   color: #7F8CA3;
 } */
 
-.faq_item-icon-wrap {
-  width: 18px;
-  height: 18px;
-  color: #7F8CA3;
-  transition: all var(--transition-time-short);
-}
-
 .faq_bottom-wrap {
   padding: 0em 0px 0px 0px;
   height: 0;
   transform: translateY(-25px);
   opacity: 0;
   transition: all var(--transition-time-short);
+  overflow: hidden;
+}
+
+.faq_bottom-wrap .text-size-normal {
+  color: #a6acb7;
 }
 
 .is--clicked .faq_bottom-wrap {
@@ -417,12 +421,28 @@ img {
   opacity: 1;
 }
 
+
 .faq_bottom-wrap {
   padding-right: 2em;
 }
 
 .faq_item-wrap:hover .faq_item-icon-wrap {
   color: var(--primary-accent-color);
+}
+
+.faq_item-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #7F8CA3;
+  transition: all var(--transition-time-short);
+}
+
+.is--clicked .faq_item-icon-wrap {
+  transform: rotate(-135deg);
+
 }
 
 /* Tablet brekpoint */
