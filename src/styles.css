@@ -1,9 +1,9 @@
 :root {
-  --bg-main-color: #1d2736;
+  --bg-main-color: #19202c;
   --text-color-light: #f8f8f8;
   --primary-accent-color: #FC6A00;
   --primary-accent-hover: #933d00;
-  --secondary-accent-color: #327EFF;
+  --secondary-accent-color: #1c6ffe;
   --section-padding-small: 7em 2em;
   --button-border-radius: 0.5em;
   --button-padding-small: .5em 0.8em;
@@ -15,6 +15,9 @@
 html {
   font-family: sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 }
 
 *,
@@ -40,6 +43,12 @@ a, u {
   text-decoration: inherit;
 }
 
+img {
+  max-width: 100%;
+  flex-shrink: inherit;
+  pointer-events: none;
+}
+
 /* Classes principais */
 
 .navbar {
@@ -54,13 +63,14 @@ a, u {
 
 .section {
   position: relative;
+  color: var(--bg-main-color);
 }
 
 .navbar {
     padding: 1em 2em;
 }
 
-.section.is--hero, .navbar {
+.section.is--hero, .navbar, .is--faq {
   background-color: var(--bg-main-color);
   color: var(--text-color-light);
 }
@@ -144,13 +154,32 @@ a, u {
     transform: var(--hover-translate-y);
 }
 
+.hero_blur-element {
+  position: absolute;
+  pointer-events: none;
+  left: -50%;
+  top: -35%;
+  width: 125vw;
+  z-index: 0;
+}
+
 .hero_product-image {
     position: absolute;
     left: 0;
     top: auto;
-    transform: translateY(17em) translateX(-8em);
+    transform: translateY(15em) translateX(-8em);
     pointer-events: none;
     max-width: 85%;
+    z-index: 1;
+}
+
+.hero_background-image {
+  position: absolute;
+  pointer-events: none;
+  left: -15em;
+  top: -15%;
+  width: 125vw;
+  z-index: 2;
 }
 
 .navbar_comp {
@@ -210,9 +239,25 @@ a, u {
   column-gap: var(--section-column-gap);
 }
 
+.about_comp .about_image-wrap {
+  flex-shrink: 0;
+}
+
 .history_comp {
   flex-direction: row-reverse;
   justify-content: space-between;
+}
+
+.history_image-wrap {
+  min-width: 50%;
+}
+
+.history_comp img {
+  max-height: 600px;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  /* flex-shrink: 1; */
 }
 
 
@@ -291,12 +336,8 @@ a, u {
   row-gap: 2em;
 }
 
-.review_comp {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  row-gap: 2em;
+.review_comp .text-size-large {
+  max-width: calc(100% - 35vmin);
 }
 
 .review_client-image {
@@ -311,6 +352,77 @@ a, u {
   justify-content: center;
   align-items: start;
   row-gap: 2em;
+}
+
+.faq_comp, .faq_heading-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.5em;
+}
+
+.faq_comp {
+  row-gap: 4em;
+}
+
+.faq_itens-wrap {
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.faq_item-wrap {
+  background-color: #333D4E;
+  padding: 1em 1em;
+  border-radius: .5em;
+  transition: all var(--transition-time-short);
+  cursor: pointer;
+}
+
+.faq_top-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .faq_item-icon {
+  width: 18px;
+  height: 18px;
+  color: #7F8CA3;
+} */
+
+.faq_item-icon-wrap {
+  width: 18px;
+  height: 18px;
+  color: #7F8CA3;
+  transition: all var(--transition-time-short);
+}
+
+.faq_bottom-wrap {
+  padding: 0em 0px 0px 0px;
+  height: 0;
+  transform: translateY(-25px);
+  opacity: 0;
+  transition: all var(--transition-time-short);
+}
+
+.is--clicked .faq_bottom-wrap {
+  transform: translateY(0px);
+  height: auto;
+  padding: 1em 0px 0px 0px;
+  opacity: 1;
+}
+
+.faq_bottom-wrap {
+  padding-right: 2em;
+}
+
+.faq_item-wrap:hover .faq_item-icon-wrap {
+  color: var(--primary-accent-color);
 }
 
 /* Tablet brekpoint */
