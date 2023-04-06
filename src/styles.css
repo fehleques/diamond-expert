@@ -115,6 +115,7 @@ img {
 
 .hero_heading-wrap {
   width: 100%;
+  z-index: 26;
 }
 
 .hero_text-wrap {
@@ -123,6 +124,7 @@ img {
   flex-direction: column;
   gap: 1.5em;
   align-items: start;
+  z-index: 25;
 }
 
 .heading-style-large {
@@ -207,6 +209,10 @@ s
 
 .navbar_brand-logo {
     width: 180px;
+}
+
+.navbar_mobile-menu-wrap {
+  display: none;
 }
 
 .heading-style-medium {
@@ -526,18 +532,126 @@ s
 /* Tablet brekpoint */
 
 @media screen and (max-width: 991px) {
+  .about_comp, .history_comp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: var(--section-column-gap);
+}
+
+.about_comp .about_image-wrap {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.about_comp, .history_comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: var(--section-column-gap);
+  row-gap: 2em;
+}
+
+.navbar_mobile-menu-wrap {
+  display: flex;
+}
+
+.navbar_menu-wrap {
+  display: none;
+}
+
+.page-wrapper {
+  overflow: hidden;
+}
+
+.footer_top-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 2em;
+}
+
+.footer_right-wrap {
+  align-items: flex-start;
+}
+
+.footer_bottom-wrap {
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.hero_product-image {
+  position: relative;
+  transform: translateY(0em) translateX(-0em);
+  max-width: 100%;
+  margin-bottom: -18em;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero_comp {
+  align-items: start;
+  gap: 2em;
+}
+
+.heading-style-large {
+  font-size: 4em;
+}
+
+.history_content-right-wrap {
+  max-width: 100%;
+}
+
+.history_image-wrap {
+  min-width: 100%;
+}
+
+.history_comp img {
+  max-height: 800px;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+
+.history_comp {
+  row-gap: 4em;
+}
 
 }
 
 /* Horizontal mobile */
 
 @media screen and (max-width: 767px) {
-  
+
+
 }
 
 /* Potrait mobile */
 
 @media screen and (max-width: 479px) {
+
+  .heading-style-large {
+    font-size: 2.5em;
+}
+
+  .hero_text-wrap {
+    max-width: 100%;
+    align-items: stretch;
+}
+
+.main-btn {
+  text-align: center;
+}
+
+.review_comp .text-size-large {
+  max-width: 100%;
+}
   
 }
 
