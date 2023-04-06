@@ -371,6 +371,7 @@ s
   align-items: center;
   justify-content: center;
   row-gap: 1.5em;
+  text-align: center;
 }
 
 .faq_comp {
