@@ -4,6 +4,7 @@
   --primary-accent-color: #FC6A00;
   --primary-accent-hover: #933d00;
   --secondary-accent-color: #1c6ffe;
+  --text-color-grey: #a6acb7;
   --section-padding-small: 7em 2em;
   --button-border-radius: 0.5em;
   --button-padding-small: .5em 0.8em;
@@ -74,7 +75,7 @@ img {
     padding: 1em 2em;
 }
 
-.section.is--hero, .navbar, .is--faq {
+.section.is--hero, .navbar, .is--faq, .footer {
   background-color: var(--bg-main-color);
   color: var(--text-color-light);
 }
@@ -151,7 +152,7 @@ img {
     background-color: transparent;
     transition: all var(--transition-time-short);
 }
-
+s
 .main-btn.is--secondary:hover {
     background-color: var(--text-color-light);
     color: var(--bg-main-color);
@@ -222,11 +223,11 @@ img {
 }
 
 .text-size-normal {
-  
+  font-size: .95em;
 }
 
 .text-size-small {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .text-overline {
@@ -411,7 +412,7 @@ img {
 }
 
 .faq_bottom-wrap .text-size-normal {
-  color: #a6acb7;
+  color: var(--text-color-grey);
 }
 
 .is--clicked .faq_bottom-wrap {
@@ -443,6 +444,83 @@ img {
 .is--clicked .faq_item-icon-wrap {
   transform: rotate(-135deg);
 
+}
+
+.footer_socials-icon {
+  color: var(--primary-accent-color);
+}
+
+.footer_comp, .footer_socials-link {
+  display: flex;
+  flex-direction: row;
+  row-gap: 3em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_comp {
+  flex-direction: column;
+}
+
+.footer_socials-wrap {
+  display: flex;
+  flex-direction: row;
+  column-gap: .6em;
+}
+
+.footer_socials-link {
+  padding: 10px 10px;
+  background-color: rgba(252, 106, 0, 0.11);
+  border-radius: var(--button-border-radius);
+}
+
+.footer_socials-icon {
+  color: var(--primary-accent-color);
+  width: 18px;
+  height: 18px;
+  justify-content: center;
+}
+
+.footer_top-wrap, .footer_bottom-wrap {
+  width: 100%;
+}
+
+.footer_top-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer_bottom-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer_comp .text-size-small {
+  color: var(--text-color-grey);
+}
+
+.footer_comp {
+  padding: 2em 0em;
+}
+
+.footer_right-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: end;
+  row-gap: 2em;
+}
+
+.footer_brand-logo {
+  width: 150px;
+}
+
+.footer_divider {
+  height: 1px;
+  width: 100%;
+  background-color: #7f8ca32e;
 }
 
 /* Tablet brekpoint */
