@@ -5,7 +5,7 @@
   --primary-accent-hover: #933d00;
   --secondary-accent-color: #1c6ffe;
   --text-color-grey: #a6acb7;
-  --section-padding-small: 7em 2em;
+  --section-padding-small: 7em .5em;
   --button-border-radius: 0.5em;
   --button-padding-small: .5em 0.8em;
   --transition-time-short: 150ms;
@@ -651,6 +651,16 @@ img {
 
 .review_comp .text-size-large {
   max-width: 100%;
+}
+
+.hero_product-image {
+  position: relative;
+  transform: translateY(0em) translateX(-0em);
+  transform: scale(1.5);
+  top: 5em;
+  left: -2em;
+  max-width: 100%;
+  margin-bottom: -8em;
 }
   
 }
