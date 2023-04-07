@@ -382,6 +382,7 @@ s
   width: 100%;
   max-width: 950px;
   display: flex;
+  text-align: left;
   flex-direction: column;
   row-gap: 1em;
   transition: all var(--transition-time-short);
