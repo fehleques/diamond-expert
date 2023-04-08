@@ -7,8 +7,12 @@ $('.navbar_mobile-menu-wrap').on('click', function() {
     $('.navbar_comp').toggleClass('is--open');
   });
 
-$(".navbar_menu-link").on ("click", function () {
-  $(".navbar").removeClass("on--scroll");
+// $(".navbar_menu-link").on ("click", function () {
+//   $(".navbar").removeClass("on--scroll");
+// });
+
+$('.navbar_menu-link').on('click', function() {
+  $(this).closest('.navbar_comp').removeClass('is--open');
 });
 
 $(window).scroll(function () {

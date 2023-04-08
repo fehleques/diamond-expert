@@ -212,6 +212,8 @@ s
 }
 
 .navbar_mobile-menu-wrap {
+  position: absolute;
+  right: 15px;
   width: 45px;
   padding: 8px;
   display: flex;
@@ -666,6 +668,10 @@ img {
 
 @media screen and (max-width: 767px) {
 
+
+  .section.is--hero {
+    overflow: hidden;
+  }
 
 }
 
