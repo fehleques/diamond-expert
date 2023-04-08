@@ -7,6 +7,10 @@ $('.navbar_mobile-menu-wrap').on('click', function() {
     $('.navbar_comp').toggleClass('is--open');
   });
 
+$(".navbar_menu-link").on ("click", function () {
+  $(".navbar").removeClass("on--scroll");
+});
+
 $(window).scroll(function () {
   $(window).scrollTop() > 100
     ? $(".navbar").addClass("on--scroll")
