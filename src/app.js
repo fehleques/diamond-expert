@@ -21,6 +21,10 @@ $(window).scroll(function () {
     : $(".navbar").removeClass("on--scroll");
 });
 
+$(window).on('scroll', function () {
+  $(".navbar_comp").removeClass("is--open")
+});
+
 // $('.faq_item-wrap').on('click', function() {
 //     $(this).removeClass('is--clicked'),
 //     $(this).toggleClass('is--clicked');
