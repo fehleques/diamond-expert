@@ -1,5 +1,5 @@
 :root {
-  --bg-main-color: #19202c;
+  --bg-main-color: #121820;
   --text-color-light: #f8f8f8;
   --primary-accent-color: #FC6A00;
   --primary-accent-hover: #933d00;
@@ -140,6 +140,7 @@ img {
     background-color: var(--primary-accent-color);
     border-radius: var(--button-border-radius);
     transition: all var(--transition-time-short);
+    color: var(--bg-main-color);
 }
 
 .main-btn:hover {
@@ -152,6 +153,7 @@ img {
     border: 1px solid var(--text-color-light);
     border-radius: var(--button-border-radius);
     background-color: transparent;
+    color: var(--text-color-light);
     transition: all var(--transition-time-short);
 }
 s
@@ -205,6 +207,14 @@ s
     display: flex;
     gap: 1.5em;
     align-items: center;
+}
+
+.navbar_menu-link {
+    transition: all 150ms;
+}
+
+.navbar_menu-link:hover {
+    color: #b7b7b7;
 }
 
 .navbar_brand-logo {
@@ -275,6 +285,10 @@ s
 
 .history_image-wrap {
   min-width: 50%;
+}
+
+.history_image {
+  width: 100%;
 }
 
 .history_comp img {
@@ -403,7 +417,7 @@ s
 }
 
 .faq_item-wrap {
-  background-color: #333D4E;
+  background-color: #2b3546;
   padding: 1em 1em;
   border-radius: .5em;
   transition: all var(--transition-time-short);
@@ -669,7 +683,11 @@ img {
 @media screen and (max-width: 767px) {
 
 
-  .section.is--hero {
+  /* .section.is--hero {
+    overflow: hidden;
+  } */
+
+  .page-wrapper {
     overflow: hidden;
   }
 
